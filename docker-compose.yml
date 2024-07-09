@@ -13,10 +13,12 @@ services:
     expose:
       - 3306
       - 33060
+    ports:
+      - 3306:3306
   moodle:
     depends_on:
        - db
-    build: .
+    build: .git
     restart: always
     ports:
       - 80:80
